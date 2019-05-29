@@ -1,0 +1,8 @@
+export const Home = 'Home'
+export const Details = 'Details'
+export const Login = 'Login'
+export const AppRoot = 'AppRoot'
+export const App = 'App'
+export const Auth = 'Auth'
+export const AppLoginSignUp = 'AppLoginSignUp'
+export const DemoListView = 'DemoListView'

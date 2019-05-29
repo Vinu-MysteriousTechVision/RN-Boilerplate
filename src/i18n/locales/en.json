@@ -1,0 +1,19 @@
+{
+  "welcomeText": "Welcome To MysTech Application",
+  "showDialogue": {
+    "Button": {
+      "Cancel": "Cancel",
+      "Confirm": "Confirm",
+      "Yes": "Yes",
+      "No": "No",
+      "OK": "OK",
+      "Delete": "Delete",
+      "Settings": "Settings"
+    }
+  },
+  "error": {
+    "ErrorTextTitle": "Smart Warmer",
+    "UnHandledError": "An error occurred. Please try again later.",
+    "NetworkError": "Network error. Please try again later."
+  }
+}
