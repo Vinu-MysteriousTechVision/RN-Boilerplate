@@ -1,0 +1,67 @@
+{
+  "name": "NaicoApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean",
+    "clear:RN-Setup": "npm run clean && cd android/ && ./gradlew clean && cd .. && rm -rf ios/build && rm -rf node_modules/",
+    "setup:clean-project": "npm run clean && rm -rf node_modules/ && yarn",
+    "clean:android": "npm run clean && cd android/ && ./gradlew clean && cd ..",
+    "clean:ios": "npm run clean && rm -rf ios/build && cd ..",
+    "run:ios-simulator": "npm test && react-native run-ios",
+    "run:ios-device": "npm test && react-native run-ios --device",
+    "run:android": "npm test && react-native run-android",
+    "images": "node scripts/images.ts",
+    "create:Feature-Dir": "node scripts/createFeatureDirectory.ts"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
+  "dependencies": {
+    "@react-native-community/netinfo": "^2.0.8",
+    "@types/react-native-loading-spinner-overlay": "^0.5.1",
+    "@types/underscore": "^1.8.14",
+    "axios": "^0.18.0",
+    "moment": "^2.24.0",
+    "react": "16.8.3",
+    "react-native": "0.59.4",
+    "react-native-fs": "^2.13.3",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-native-keyboard-aware-scroll-view": "^0.8.0",
+    "react-native-loading-spinner-overlay": "^1.0.1",
+    "react-native-localization": "^2.1.1",
+    "react-native-splash-screen": "^3.2.0",
+    "react-navigation": "^3.8.1",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "typescript-fsa": "^3.0.0-beta-2",
+    "typescript-fsa-reducers": "^1.2.1",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.13",
+    "@types/react-native": "^0.57.43",
+    "@types/react-test-renderer": "^16.8.1",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-test-renderer": "16.8.3",
+    "redux-devtools": "^3.5.0",
+    "tslint": "^5.15.0",
+    "tslint-react": "^4.0.0",
+    "tslint-react-recommended": "^1.0.15",
+    "typescript": "^3.4.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
